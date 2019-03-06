@@ -19,4 +19,8 @@ export default class App extends Vue {
     { title: 'Notification', icon: 'mdi-bell' }
   ];
   private right = null;
+
+  private clickMenu() {
+    console.log('click menu');
+  }
 }

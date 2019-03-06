@@ -44,34 +44,30 @@
 
         <v-divider></v-divider>
 
-        <v-flex>
-          <v-list class="pt-0">
-            <v-text-field label="Search..." color="purple"></v-text-field>
-            <v-list-tile v-for="item in items" :key="item.title" @click>
-              <v-list-tile-action>
-                <v-icon>{{ item.icon }}</v-icon>
-              </v-list-tile-action>
+        <v-list class="pt-0">
+          <v-text-field label="Search..." color="purple"></v-text-field>
+          <v-list-tile v-for="item in items" :key="item.title" @click="clickMenu">
+            <v-list-tile-action>
+              <v-icon>{{ item.icon }}</v-icon>
+            </v-list-tile-action>
 
-              <v-list-tile-content>
-                <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-              </v-list-tile-content>
-            </v-list-tile>
-          </v-list>
-        </v-flex>
-        <v-spacer></v-spacer>
-        <v-flex>
-          <v-list class="pt-0">
-            <v-list-tile>
-              <v-list-tile-action>
-                <v-icon>mdi-bell</v-icon>
-              </v-list-tile-action>
+            <v-list-tile-content>
+              <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
 
-              <v-list-tile-content>
-                <v-list-tile-title>Upgrade To PRO</v-list-tile-title>
-              </v-list-tile-content>
-            </v-list-tile>
-          </v-list>
-        </v-flex>
+          <v-spacer></v-spacer>
+
+          <v-list-tile>
+            <v-list-tile-action>
+              <v-icon>mdi-bell</v-icon>
+            </v-list-tile-action>
+
+            <v-list-tile-content>
+              <v-list-tile-title>Upgrade To PRO</v-list-tile-title>
+            </v-list-tile-content>
+          </v-list-tile>
+        </v-list>
       </v-layout>
       <!-- </v-img> -->
     </v-navigation-drawer>

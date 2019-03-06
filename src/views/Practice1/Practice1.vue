@@ -1,7 +1,7 @@
 <template>
   <v-container fluid grid-list-xl>
     <v-layout row wrap>
-      <v-flex md12 sm12 lg4 mt-3>
+      <v-flex md12 sm12 lg4 mt-4>
         <v-card>
           <v-flex py-0 px-3>
             <div class="card-filler">
@@ -30,7 +30,7 @@
           </v-flex>
         </v-card>
       </v-flex>
-      <v-flex md12 sm12 lg4 mt-3>
+      <v-flex md12 sm12 lg4 mt-4>
         <v-card>
           <v-flex py-0 px-3>
             <div class="card-filler">
@@ -56,7 +56,7 @@
           </v-flex>
         </v-card>
       </v-flex>
-      <v-flex md12 sm12 lg4 mt-3>
+      <v-flex md12 sm12 lg4 mt-4>
         <v-card>
           <v-flex py-0 px-3>
             <div class="card-filler">
@@ -85,18 +85,18 @@
     </v-layout>
 
     <v-layout row wrap>
-      <v-flex sm6 xs12 md6 lg3 mt-3>
+      <v-flex sm6 xs12 md6 lg3 mt-4>
         <v-card>
           <v-flex py-0 px-3>
             <v-container px-0>
               <v-layout row wrap pt-0>
                 <v-flex pt-0>
                   <div class="small-card-filler">
-                    <!-- <div class="small-svg-filler green-like"> -->
-                    <v-flex class="small-svg-filler green-like text-xs-center" align-self-center>
+                    <div class="small-svg-filler green-like">
+                      <!-- <v-flex class="small-svg-filler green-like text-xs-center"> -->
                       <v-icon color="white" large>mdi-store</v-icon>
-                    </v-flex>
-                    <!-- </div> -->
+                      <!-- </v-flex> -->
+                    </div>
                   </div>
                 </v-flex>
                 <v-flex pt-0 text-xs-right>
@@ -118,106 +118,175 @@
           </v-flex>
         </v-card>
       </v-flex>
-      <v-flex sm6 xs12 md6 lg3 mt-3>
+      <v-flex sm6 xs12 md6 lg3 mt-4>
         <v-card>
-          <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="2.75"></v-img>
-          <v-card-title primary-title offset-sm3>
-            <div>
-              <h3 class="headline mb-0">Daily Sales</h3>
-              <div>
-                <v-icon>mdi-arrow-up</v-icon>
-                <span class="green--text">55%</span>
-                increase in today's sales
-              </div>
-            </div>
-          </v-card-title>
-          <v-divider></v-divider>
-          <v-card-actions>
-            <v-icon>mdi-clock-outline</v-icon>
-            <div>updated 4 minutes ago</div>
-          </v-card-actions>
+          <v-flex py-0 px-3>
+            <v-container px-0>
+              <v-layout row wrap pt-0>
+                <v-flex pt-0>
+                  <div class="small-card-filler">
+                    <div class="small-svg-filler yellow-like">
+                      <!-- <v-flex class="small-svg-filler green-like text-xs-center"> -->
+                      <v-icon color="white" large>mdi-content-copy</v-icon>
+                      <!-- </v-flex> -->
+                    </div>
+                  </div>
+                </v-flex>
+                <v-flex pt-0 text-xs-right>
+                  <!-- <v-card-title>Revenue</v-card-title> -->
+                  <v-card-text>
+                    <div class="grey--text">Used Space</div>
+                    <div class="headline font-weight-light">
+                      49/50
+                      <span class="grey--text subheading">GB</span>
+                    </div>
+                  </v-card-text>
+                </v-flex>
+              </v-layout>
+            </v-container>
+            <v-divider></v-divider>
+            <v-card-actions>
+              <v-icon small color="red lighten-1">mdi-alert</v-icon>
+              <div class="purple--text text--lighten-2">&nbsp;&nbsp;Get More Space...</div>
+            </v-card-actions>
+          </v-flex>
         </v-card>
       </v-flex>
-      <v-flex sm6 xs12 md6 lg3>
+      <v-flex sm6 xs12 md6 lg3 mt-4>
         <v-card>
-          <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="2.75"></v-img>
-          <v-card-title primary-title offset-sm3>
-            <div>
-              <h3 class="headline mb-0">Daily Sales</h3>
-              <div>
-                <v-icon>mdi-arrow-up</v-icon>
-                <span class="green--text">55%</span>
-                increase in today's sales
-              </div>
-            </div>
-          </v-card-title>
-          <v-divider></v-divider>
-          <v-card-actions>
-            <v-icon>mdi-clock-outline</v-icon>
-            <div>updated 4 minutes ago</div>
-          </v-card-actions>
+          <v-flex py-0 px-3>
+            <v-container px-0>
+              <v-layout row wrap pt-0>
+                <v-flex pt-0>
+                  <div class="small-card-filler">
+                    <div class="small-svg-filler red-like">
+                      <v-icon color="white" large>mdi-information-outline</v-icon>
+                    </div>
+                  </div>
+                </v-flex>
+                <v-flex pt-0 text-xs-right>
+                  <v-card-text>
+                    <div class="grey--text">Fixed Issues</div>
+                    <div class="headline font-weight-light">75</div>
+                  </v-card-text>
+                </v-flex>
+              </v-layout>
+            </v-container>
+
+            <v-divider></v-divider>
+
+            <v-card-actions>
+              <v-icon small>mdi-tag</v-icon>
+              <div class="grey--text">&nbsp;&nbsp;Tracked from Github</div>
+            </v-card-actions>
+          </v-flex>
         </v-card>
       </v-flex>
-      <v-flex sm6 xs12 md6 lg3>
+      <v-flex sm6 xs12 md6 lg3 mt-4>
         <v-card>
-          <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="2.75"></v-img>
-          <v-card-title primary-title offset-sm3>
-            <div>
-              <h3 class="headline mb-0">Daily Sales</h3>
-              <div>
-                <v-icon>mdi-arrow-up</v-icon>
-                <span class="green--text">55%</span>
-                increase in today's sales
-              </div>
-            </div>
-          </v-card-title>
-          <v-divider></v-divider>
-          <v-card-actions>
-            <v-icon>mdi-clock-outline</v-icon>
-            <div>updated 4 minutes ago</div>
-          </v-card-actions>
+          <v-flex py-0 px-3>
+            <v-container px-0>
+              <v-layout row wrap pt-0>
+                <v-flex pt-0>
+                  <div class="small-card-filler">
+                    <div class="small-svg-filler blue-like">
+                      <v-icon color="white" large>mdi-twitter</v-icon>
+                    </div>
+                  </div>
+                </v-flex>
+                <v-flex pt-0 text-xs-right>
+                  <!-- <v-card-title>Revenue</v-card-title> -->
+                  <v-card-text>
+                    <div class="grey--text">Followers</div>
+                    <div class="headline font-weight-light">+245</div>
+                  </v-card-text>
+                </v-flex>
+              </v-layout>
+            </v-container>
+
+            <v-divider></v-divider>
+
+            <v-card-actions>
+              <v-icon small>mdi-calendar</v-icon>
+              <div class="grey--text">&nbsp;&nbsp;Just Updated</div>
+            </v-card-actions>
+          </v-flex>
         </v-card>
       </v-flex>
     </v-layout>
     <v-layout row wrap>
-      <v-flex md12 lg6>
+      <v-flex md12 lg6 mt-4>
         <v-card>
-          <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="2.75"></v-img>
-          <v-card-title primary-title offset-sm3>
-            <div>
-              <h3 class="headline mb-0">Daily Sales</h3>
-              <div>
-                <v-icon>mdi-arrow-up</v-icon>
-                <span class="green--text">55%</span>
-                increase in today's sales
+          <v-flex py-0 px-3>
+            <div class="big-card-filler">
+              <div class="card-title-zone yellow-like white--text">
+                <v-card-text>
+                  <div class="title font-weight-light">Employee Stats</div>
+                </v-card-text>
+                <div class="font-weight-light">New employees on 15th September, 2016</div>
               </div>
             </div>
-          </v-card-title>
-          <v-divider></v-divider>
-          <v-card-actions>
-            <v-icon>mdi-clock-outline</v-icon>
-            <div>updated 4 minutes ago</div>
-          </v-card-actions>
+
+            <v-card-text>
+              <v-data-table :headers="headers" :items="desserts" hide-actions>
+                <template v-slot:items="props">
+                  <td>{{ props.item.id }}</td>
+                  <td>{{ props.item.name }}</td>
+                  <td class="text-xs-right">{{ props.item.salary }}</td>
+                  <td class="text-xs-right">{{ props.item.country }}</td>
+                  <td class="text-xs-right">{{ props.item.city }}</td>
+                </template>
+              </v-data-table>
+            </v-card-text>
+          </v-flex>
         </v-card>
       </v-flex>
       <v-flex md12 lg6>
         <v-card>
-          <v-img src="https://cdn.vuetifyjs.com/images/cards/desert.jpg" aspect-ratio="2.75"></v-img>
-          <v-card-title primary-title offset-sm3>
-            <div>
-              <h3 class="headline mb-0">Daily Sales</h3>
-              <div>
-                <v-icon>mdi-arrow-up</v-icon>
-                <span class="green--text">55%</span>
-                increase in today's sales
+          <v-flex py-0 px-0>
+            <div class="big-card-filler-2">
+              <v-tabs
+                v-model="active"
+                color="#4caf50"
+                dark
+                slider-color="white"
+                class="card-title-zone"
+              >
+                <div class="white--text margin-right">Tasks:</div>
+                <!-- <v-tab v-for="n in 3" :key="n" ripple>Item {{ n }}</v-tab> -->
+                <v-tab>
+                  <v-icon>mdi-bug</v-icon>
+                  <div>&nbsp;Bugs</div>
+                </v-tab>
+                <v-tab>
+                  <v-icon>mdi-code-tags</v-icon>
+                  <div>&nbsp;Website</div>
+                </v-tab>
+                <v-tab>
+                  <v-icon>mdi-cloud</v-icon>
+                  <div>&nbsp;Server</div>
+                </v-tab>
+
+                <v-tab-item v-for="n in 3" :key="n">
+                  <v-card flat>
+                    <v-card-text>asdfasdf</v-card-text>
+                  </v-card>
+                </v-tab-item>
+              </v-tabs>
+            </div>
+
+            <!-- <div class="big-card-filler">
+              <div class="card-title-zone green-like white--text">
+                <v-card-text>
+                  <v-layout row wrap>
+                    <v-flex xs1 class="title font-weight-light">Tasks:</v-flex>
+                    <v-flex xs11></v-flex>
+                  </v-layout>
+                </v-card-text>
               </div>
             </div>
-          </v-card-title>
-          <v-divider></v-divider>
-          <v-card-actions>
-            <v-icon>mdi-clock-outline</v-icon>
-            <div>updated 4 minutes ago</div>
-          </v-card-actions>
+            <v-card-text></v-card-text>-->
+          </v-flex>
         </v-card>
       </v-flex>
     </v-layout>
@@ -226,7 +295,7 @@
 
 <script lang='ts' src='./Practice1.ts' />
 
-<style scoped lang='scss'>
+<style lang='scss'>
 .card-filler {
   width: 100%;
   height: 200px;
@@ -237,6 +306,16 @@
   height: 60px;
   position: relative;
   // background-color: green;
+}
+.big-card-filler {
+  width: 100%;
+  height: 90px;
+  position: relative;
+}
+.big-card-filler-2 {
+  width: 100%;
+  height: 300px;
+  position: relative;
 }
 .svg-filler {
   width: 100%;
@@ -249,8 +328,34 @@
   width: 85px;
   height: 85px;
   position: absolute;
-  top: -30px;
+  top: -20px;
   border-radius: 5px;
+  text-align: center;
+  line-height: 100px;
+}
+.card-title-zone {
+  width: 100%;
+  // height: 100px;
+  position: absolute;
+  top: -15px;
+  border-radius: 5px;
+  padding: 15px;
+}
+.p-relative {
+  position: relative;
+}
+.p-absolute {
+  position: absolute;
+}
+.v-tabs__bar {
+  height: 78px;
+  border-radius: 5px;
+  line-height: 50px;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+.margin-right {
+  margin-right: 20px;
 }
 
 .blue-like {
@@ -262,13 +367,9 @@
 .green-like {
   background-color: #4caf50;
 }
-// .po-relative {
-//   position: relative !important;
-// }
-// .po-absolute {
-//   position: absolute !important;
-//   top: 0;
-// }
+.yellow-like {
+  background-color: #ff9800;
+}
 
 .v-card__title {
   // padding-right: 0;
