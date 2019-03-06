@@ -241,7 +241,7 @@
           </v-flex>
         </v-card>
       </v-flex>
-      <v-flex md12 lg6>
+      <v-flex md12 lg6 mt-4>
         <v-card>
           <v-flex py-0 px-0>
             <div class="big-card-filler-2">
