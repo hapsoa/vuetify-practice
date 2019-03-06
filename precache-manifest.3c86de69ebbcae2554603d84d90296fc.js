@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "1002b0e1fb4bebe4504d",
+    "revision": "e71bb8b5762e48034f85",
     "url": "/dashboard-example/css/app.0cdd7618.css"
   },
   {
-    "revision": "1002b0e1fb4bebe4504d",
-    "url": "/dashboard-example/js/app.fe98236c.js"
+    "revision": "e71bb8b5762e48034f85",
+    "url": "/dashboard-example/js/app.16b37318.js"
   },
   {
     "revision": "5546a7a421c049a1e821",
@@ -24,19 +24,19 @@ self.__precacheManifest = [
     "url": "/dashboard-example/fonts/materialdesignicons-webfont.26333b38.woff"
   },
   {
-    "revision": "1993c4a16cce5446a5cfafacf4da740b",
-    "url": "/dashboard-example/fonts/materialdesignicons-webfont.1993c4a1.eot"
-  },
-  {
     "revision": "baded94134f273450a473a4962111324",
     "url": "/dashboard-example/fonts/materialdesignicons-webfont.baded941.ttf"
+  },
+  {
+    "revision": "1993c4a16cce5446a5cfafacf4da740b",
+    "url": "/dashboard-example/fonts/materialdesignicons-webfont.1993c4a1.eot"
   },
   {
     "revision": "032eb679a327d4668d7537c32c314fbc",
     "url": "/dashboard-example/img/materialdesignicons-webfont.032eb679.svg"
   },
   {
-    "revision": "565175e7e98786e44faa0473a2af0af9",
+    "revision": "a0733b8202ba09fcda2cd0f7ab22e52a",
     "url": "/dashboard-example/index.html"
   },
   {
