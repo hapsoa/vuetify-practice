@@ -81,6 +81,32 @@ export default class Practice1 extends Vue {
 
   private active = null;
 
+  private secondHeaders: object[] = [
+    {
+      text: 'Dessert (100g serving)',
+      align: 'left',
+      value: 'name'
+    },
+    { text: 'Calories', value: 'calories' },
+    { text: 'Fat (g)', value: 'fat' },
+    { text: 'Carbs (g)', value: 'carbs' },
+    { text: 'Protein (g)', value: 'protein' },
+    { text: 'Iron (%)', value: 'iron' }
+  ];
+
+  private secondDesserts: object[] = [
+    {
+      name:
+        'Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit'
+    },
+    {
+      name: 'Lines From Great Russian Literature? Or E-mails From My Boss?'
+    },
+    {
+      name: 'Sign contract for "What conference organized afraid of?'
+    }
+  ];
+
   private created() {
     console.log('hihi');
   }

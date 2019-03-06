@@ -250,7 +250,7 @@
                 color="#4caf50"
                 dark
                 slider-color="white"
-                class="card-title-zone"
+                class="card-title-zone-2"
               >
                 <div class="white--text margin-right">Tasks:</div>
                 <!-- <v-tab v-for="n in 3" :key="n" ripple>Item {{ n }}</v-tab> -->
@@ -269,23 +269,59 @@
 
                 <v-tab-item v-for="n in 3" :key="n">
                   <v-card flat>
-                    <v-card-text>asdfasdf</v-card-text>
+                    <v-card-text>
+                      <v-flex>
+                        <v-data-table
+                          :headers="secondHeaders"
+                          hide-headers
+                          hide-actions
+                          :items="secondDesserts"
+                          select-all
+                          item-key="name"
+                        >
+                          <template v-slot:headers="props">
+                            <tr>
+                              <th>
+                                <v-checkbox
+                                  :input-value="props.all"
+                                  :indeterminate="props.indeterminate"
+                                  primary
+                                  hide-details
+                                  @click.stop="toggleAll"
+                                ></v-checkbox>
+                              </th>
+                              <th
+                                v-for="header in props.headers"
+                                :key="header.text"
+                                :class="['column sortable', pagination.descending ? 'desc' : 'asc', header.value === pagination.sortBy ? 'active' : '']"
+                                @click="changeSort(header.value)"
+                              >
+                                <v-icon small>arrow_upward</v-icon>
+                                {{ header.text }}
+                              </th>
+                            </tr>
+                          </template>
+                          <template v-slot:items="props">
+                            <tr>
+                              <td>
+                                <v-checkbox primary hide-details></v-checkbox>
+                              </td>
+                              <td>{{ props.item.name }}</td>
+                              <td class="padding-5">
+                                <v-icon color="green" size="19">mdi-pencil</v-icon>
+                              </td>
+                              <td class="padding-5">
+                                <v-icon color="red" size="19">mdi-close</v-icon>
+                              </td>
+                            </tr>
+                          </template>
+                        </v-data-table>
+                      </v-flex>
+                    </v-card-text>
                   </v-card>
                 </v-tab-item>
               </v-tabs>
             </div>
-
-            <!-- <div class="big-card-filler">
-              <div class="card-title-zone green-like white--text">
-                <v-card-text>
-                  <v-layout row wrap>
-                    <v-flex xs1 class="title font-weight-light">Tasks:</v-flex>
-                    <v-flex xs11></v-flex>
-                  </v-layout>
-                </v-card-text>
-              </div>
-            </div>
-            <v-card-text></v-card-text>-->
           </v-flex>
         </v-card>
       </v-flex>
@@ -314,7 +350,7 @@
 }
 .big-card-filler-2 {
   width: 100%;
-  height: 300px;
+  height: 260px;
   position: relative;
 }
 .svg-filler {
@@ -338,6 +374,14 @@
   // height: 100px;
   position: absolute;
   top: -15px;
+  border-radius: 5px;
+  padding: 15px;
+}
+.card-title-zone-2 {
+  width: 100%;
+  // height: 100px;
+  position: absolute;
+  top: -30px;
   border-radius: 5px;
   padding: 15px;
 }
@@ -372,9 +416,6 @@
 }
 
 .v-card__title {
-  // padding-right: 0;
-  // padding-left: 0;
-  // padding-top: 0;
   padding: 0;
 }
 .v-card__text {
@@ -386,5 +427,9 @@
 .v-card__actions {
   padding-left: 0;
   padding-right: 0;
+}
+
+.padding-5 {
+  padding: 5px !important;
 }
 </style>

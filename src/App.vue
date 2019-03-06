@@ -8,10 +8,10 @@
         <!-- <v-input></v-input> -->
         <v-text-field label="Search..." color="purple"></v-text-field>
         <v-layout align-center>
-          <v-btn flat>
+          <v-btn flat icon>
             <v-icon>dashboard</v-icon>
           </v-btn>
-          <v-btn flat>
+          <v-btn flat icon>
             <!-- <v-icon>mdi-bell</v-icon> -->
             <v-badge color="red">
               <template v-slot:badge>
@@ -22,7 +22,7 @@
             </v-badge>
             <!-- <v-icon>dashboard</v-icon> -->
           </v-btn>
-          <v-btn flat>
+          <v-btn flat icon>
             <v-icon>mdi-account</v-icon>
           </v-btn>
         </v-layout>
@@ -55,19 +55,22 @@
               <v-list-tile-title>{{ item.title }}</v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
-
-          <v-spacer></v-spacer>
-
-          <v-list-tile>
-            <v-list-tile-action>
-              <v-icon>mdi-bell</v-icon>
-            </v-list-tile-action>
-
-            <v-list-tile-content>
-              <v-list-tile-title>Upgrade To PRO</v-list-tile-title>
-            </v-list-tile-content>
-          </v-list-tile>
         </v-list>
+
+        <v-spacer></v-spacer>
+        <v-flex>
+          <v-list>
+            <v-list-tile>
+              <v-list-tile-action>
+                <v-icon>mdi-package-up</v-icon>
+              </v-list-tile-action>
+
+              <v-list-tile-content>
+                <v-list-tile-title>Upgrade To PRO</v-list-tile-title>
+              </v-list-tile-content>
+            </v-list-tile>
+          </v-list>
+        </v-flex>
       </v-layout>
       <!-- </v-img> -->
     </v-navigation-drawer>
@@ -77,7 +80,17 @@
       <router-view></router-view>
       <!-- </v-container> -->
     </v-content>
-    <v-footer></v-footer>
+    <v-footer absolute inset app>
+      <v-layout justify-center row wrap text-xs-center>
+        <v-flex xs1>Home</v-flex>
+        <v-flex xs1>CREATIVE TIM</v-flex>
+        <v-flex xs1>ABOUT US</v-flex>
+        <v-flex xs1>BLOG</v-flex>
+        <v-flex text-xs-right xs8>&copy; 2019 Creative Tim, made with
+          <v-icon small>mdi-heart</v-icon>&nbsp;for a better web
+        </v-flex>
+      </v-layout>
+    </v-footer>
   </v-app>
 </template>
 
