@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "0b1665aab4da38c1c32f",
-    "url": "/vuetify-practice/css/app.0cdd7618.css"
+    "revision": "48cd9bd88893081635ba",
+    "url": "/vuetify-practice/css/app.be68ed63.css"
   },
   {
-    "revision": "0b1665aab4da38c1c32f",
-    "url": "/vuetify-practice/js/app.a86b314b.js"
+    "revision": "48cd9bd88893081635ba",
+    "url": "/vuetify-practice/js/app.36e01e21.js"
   },
   {
-    "revision": "5546a7a421c049a1e821",
-    "url": "/vuetify-practice/css/chunk-vendors.b865bfdb.css"
+    "revision": "6be35b935d5e645c031e",
+    "url": "/vuetify-practice/css/chunk-vendors.a8166a1c.css"
   },
   {
-    "revision": "5546a7a421c049a1e821",
-    "url": "/vuetify-practice/js/chunk-vendors.22eb2c60.js"
+    "revision": "6be35b935d5e645c031e",
+    "url": "/vuetify-practice/js/chunk-vendors.49967e12.js"
   },
   {
     "revision": "af3f6dbe172a9c1aba77366a2ff630d1",
@@ -36,7 +36,7 @@ self.__precacheManifest = [
     "url": "/vuetify-practice/img/materialdesignicons-webfont.032eb679.svg"
   },
   {
-    "revision": "ab3fb7a7d65e5f951c0c0d92c70c843c",
+    "revision": "38e5db74734d5b32feac28f96dc0dd5d",
     "url": "/vuetify-practice/index.html"
   },
   {
