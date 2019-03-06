@@ -3,7 +3,7 @@ module.exports = {
     host: '0.0.0.0',
     disableHostCheck: true
   },
-  baseUrl: '/dashboard-example',
+  baseUrl: '/vuetify-practice',
   outputDir: undefined,
   assetsDir: undefined,
   runtimeCompiler: undefined,
