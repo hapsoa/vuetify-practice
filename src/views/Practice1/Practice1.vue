@@ -34,7 +34,7 @@
         <v-card>
           <v-flex py-0 px-3>
             <div class="card-filler">
-              <div class="svg-filler red-like"></div>
+              <svg class="svg-filler red-like"></svg>
             </div>
 
             <v-card-title px-0>
