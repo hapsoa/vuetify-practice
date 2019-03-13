@@ -5,7 +5,9 @@
         <v-card>
           <v-flex py-0 px-3>
             <div class="card-filler">
-              <div class="svg-filler blue-like"></div>
+              <div class="svg-filler blue-like">
+                <line-graph></line-graph>
+              </div>
             </div>
 
             <v-card-title px-0>
