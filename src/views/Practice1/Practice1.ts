@@ -1,6 +1,7 @@
 import { Component, Vue } from 'vue-property-decorator';
 // import _ from 'lodash';
-import LineGraph from '@/components/LineGraph/LineGraph';
+import Point from '@/api/class/Point.ts';
+import LineGraph from '@/components/LineGraph/LineGraph.vue';
 
 @Component({
   components: {
@@ -106,6 +107,50 @@ export default class Practice1 extends Vue {
       name: 'Sign contract for "What conference organized afraid of?',
     },
   ];
+
+  private dailySalesGraph = {
+    horizonTexts: ['0', '10', '20', '30', '40'],
+    verticalTexts: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+    nodes: [
+      new Point(0, 1.0),
+      new Point(1, 1.7),
+      new Point(2, 0.8),
+      new Point(3, 1.8),
+      new Point(4, 2.4),
+      new Point(5, 2.0),
+      new Point(6, 3.8),
+    ],
+  };
+
+  private emailSubscriptionGraph = {
+    horizonTexts: ['0', '200', '400', '600', '800'],
+    verticalTexts: ['12am', '3pm', '6pm', '9pm', '12pm', '3am', '6am', '9am'],
+    nodes: [
+      new Point(0, 1.0),
+      new Point(1, 3.8),
+      new Point(2, 2.2),
+      new Point(3, 1.45),
+      new Point(4, 1.4),
+      new Point(5, 1.1),
+      new Point(6, 1.0),
+      new Point(7, 1.0),
+    ],
+  };
+
+  private completedTasks = {
+    horizonTexts: ['0', '200', '400', '600', '800'],
+    verticalTexts: ['12am', '3pm', '6pm', '9pm', '12pm', '3am', '6am', '9am'],
+    nodes: [
+      new Point(0, 1.0),
+      new Point(1, 3.8),
+      new Point(2, 2.2),
+      new Point(3, 1.45),
+      new Point(4, 1.4),
+      new Point(5, 1.1),
+      new Point(6, 1.0),
+      new Point(7, 1.0),
+    ],
+  };
 
   private created() {
     console.log('hihi');

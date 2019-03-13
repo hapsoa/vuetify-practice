@@ -1,5 +1,5 @@
 <template>
-  <svg ref="svgZone" class="svg-filler blue-like">
+  <svg ref="svgZone" class="svg-filler">
     <g>
       <line
         v-for="(lineData, i) in horizonLineDataList"

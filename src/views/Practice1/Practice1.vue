@@ -6,7 +6,7 @@
           <v-flex py-0 px-3>
             <div class="card-filler">
               <div class="svg-filler blue-like">
-                <line-graph></line-graph>
+                <line-graph v-bind="dailySalesGraph"></line-graph>
               </div>
             </div>
 
@@ -36,7 +36,9 @@
         <v-card>
           <v-flex py-0 px-3>
             <div class="card-filler">
-              <svg class="svg-filler red-like"></svg>
+              <svg class="svg-filler red-like">
+                <line-graph v-bind="emailSubscriptionGraph"></line-graph>
+              </svg>
             </div>
 
             <v-card-title px-0>
@@ -62,7 +64,9 @@
         <v-card>
           <v-flex py-0 px-3>
             <div class="card-filler">
-              <div class="svg-filler green-like"></div>
+              <div class="svg-filler green-like">
+                <line-graph v-bind="completedTasks"></line-graph>
+              </div>
             </div>
 
             <v-card-title px-0>

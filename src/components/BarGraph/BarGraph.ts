@@ -18,7 +18,7 @@ import Point from '@/api/class/Point';
     },
   },
 })
-export default class LineGraph extends Vue {
+export default class BarGraph extends Vue {
   // @ts-ignore-nextline
   public $refs: Vue['$refs'] & {
     svgZone: HTMLElement;
@@ -43,29 +43,18 @@ export default class LineGraph extends Vue {
   }> = [];
 
   // 세로 선
-  private verticalLineDataList: Array<{
-    x1: number;
-    y1: number;
-    x2: number;
-    y2: number;
-  }> = [];
-  // private verticalTexts: string[] = ['M', 'T', 'W', 'T', 'F', 'S', 'S'];
+  // private verticalLineDataList: Array<{
+  //   x1: number;
+  //   y1: number;
+  //   x2: number;
+  //   y2: number;
+  // }> = [];
   private verticalTextDataList: Array<{
     text: string;
     x: number;
     y: number;
   }> = [];
 
-  // 노드
-  // private nodes: Point[] = [
-  //   new Point(0, 1.0),
-  //   new Point(1, 1.7),
-  //   new Point(2, 0.8),
-  //   new Point(3, 1.8),
-  //   new Point(4, 2.4),
-  //   new Point(5, 2.0),
-  //   new Point(6, 3.8),
-  // ];
   private nodeLines: Array<{
     x1: number;
     y1: number;
@@ -93,20 +82,20 @@ export default class LineGraph extends Vue {
       });
     }
     for (let i = 0; i < this.$props.verticalTexts.length; i++) {
-      this.verticalLineDataList.push({
-        x1:
-          40 +
-          i *
-            ((this.$refs.svgZone.clientWidth - 40) /
-              this.$props.verticalTexts.length),
-        y1: 0,
-        x2:
-          40 +
-          i *
-            ((this.$refs.svgZone.clientWidth - 40) /
-              this.$props.verticalTexts.length),
-        y2: 155,
-      });
+      // this.verticalLineDataList.push({
+      //   x1:
+      //     40 +
+      //     i *
+      //       ((this.$refs.svgZone.clientWidth - 40) /
+      //         this.$props.verticalTexts.length),
+      //   y1: 0,
+      //   x2:
+      //     40 +
+      //     i *
+      //       ((this.$refs.svgZone.clientWidth - 40) /
+      //         this.$props.verticalTexts.length),
+      //   y2: 155,
+      // });
       this.verticalTextDataList.push({
         text: this.$props.verticalTexts[i],
         x:
@@ -141,18 +130,18 @@ export default class LineGraph extends Vue {
       _.forEach(this.horizonLineDataList, (lineData, i) => {
         lineData.x2 = this.$refs.svgZone.clientWidth;
       });
-      _.forEach(this.verticalLineDataList, (lineData, i) => {
-        lineData.x1 =
-          40 +
-          i *
-            ((this.$refs.svgZone.clientWidth - 40) /
-              this.$props.verticalTexts.length);
-        lineData.x2 =
-          40 +
-          i *
-            ((this.$refs.svgZone.clientWidth - 40) /
-              this.$props.verticalTexts.length);
-      });
+      // _.forEach(this.verticalLineDataList, (lineData, i) => {
+      //   lineData.x1 =
+      //     40 +
+      //     i *
+      //       ((this.$refs.svgZone.clientWidth - 40) /
+      //         this.$props.verticalTexts.length);
+      //   lineData.x2 =
+      //     40 +
+      //     i *
+      //       ((this.$refs.svgZone.clientWidth - 40) /
+      //         this.$props.verticalTexts.length);
+      // });
 
       this.verticalDistanceUnit =
         (this.$refs.svgZone.clientWidth - this.standardPoint.x) /

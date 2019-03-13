@@ -14,9 +14,9 @@ export default new Router({
       component: Home,
     },
     {
-      path: '/line-graph',
-      name: 'line-graph',
-      component: () => import('./components/LineGraph/LineGraph.vue'),
+      path: '/bar-graph-test',
+      name: 'bar-graph-test',
+      component: () => import('./views/test/BarGraphTest/BarGraphTest.vue'),
     },
   ],
 });
