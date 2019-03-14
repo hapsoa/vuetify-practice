@@ -42,24 +42,24 @@ export default class BarGraph extends Vue {
     y: number;
   }> = [];
 
-  // 세로 선
-  // private verticalLineDataList: Array<{
-  //   x1: number;
-  //   y1: number;
-  //   x2: number;
-  //   y2: number;
-  // }> = [];
+  // 세로
   private verticalTextDataList: Array<{
     text: string;
     x: number;
     y: number;
   }> = [];
 
-  private nodeLines: Array<{
-    x1: number;
-    y1: number;
-    x2: number;
-    y2: number;
+  // private nodeLines: Array<{
+  //   x1: number;
+  //   y1: number;
+  //   x2: number;
+  //   y2: number;
+  // }> = [];
+  private bars: Array<{
+    x: number;
+    y: number;
+    width: number;
+    height: number;
   }> = [];
 
   private mounted() {
@@ -82,20 +82,6 @@ export default class BarGraph extends Vue {
       });
     }
     for (let i = 0; i < this.$props.verticalTexts.length; i++) {
-      // this.verticalLineDataList.push({
-      //   x1:
-      //     40 +
-      //     i *
-      //       ((this.$refs.svgZone.clientWidth - 40) /
-      //         this.$props.verticalTexts.length),
-      //   y1: 0,
-      //   x2:
-      //     40 +
-      //     i *
-      //       ((this.$refs.svgZone.clientWidth - 40) /
-      //         this.$props.verticalTexts.length),
-      //   y2: 155,
-      // });
       this.verticalTextDataList.push({
         text: this.$props.verticalTexts[i],
         x:
@@ -107,60 +93,62 @@ export default class BarGraph extends Vue {
       });
     }
 
-    for (let i = 1; i < this.$props.nodes.length; i++) {
-      this.nodeLines.push({
-        x1:
-          this.standardPoint.x +
-          this.$props.nodes[i - 1].x * this.verticalDistanceUnit,
-        y1:
-          this.standardPoint.y -
-          this.$props.nodes[i - 1].y * this.horizonDistanceUnit,
-        x2:
+    // tslint:disable-next-line:prefer-for-of
+    for (let i = 0; i < this.$props.nodes.length; i++) {
+      this.bars.push({
+        x:
           this.standardPoint.x +
           this.$props.nodes[i].x * this.verticalDistanceUnit,
-        y2:
+        y:
           this.standardPoint.y -
           this.$props.nodes[i].y * this.horizonDistanceUnit,
+        width: 14,
+        height: this.$props.nodes[i].y * this.horizonDistanceUnit,
       });
     }
 
     window.addEventListener('resize', () => {
       console.log('resizing');
-      // this.$set(this.lineData, 'x2', this.$refs.svgZone.clientWidth);
+      console.log(
+        'this.$refs.svgZone.clientWidth',
+        this.$refs.svgZone.clientWidth,
+      );
+
       _.forEach(this.horizonLineDataList, (lineData, i) => {
         lineData.x2 = this.$refs.svgZone.clientWidth;
       });
-      // _.forEach(this.verticalLineDataList, (lineData, i) => {
-      //   lineData.x1 =
-      //     40 +
-      //     i *
-      //       ((this.$refs.svgZone.clientWidth - 40) /
-      //         this.$props.verticalTexts.length);
-      //   lineData.x2 =
-      //     40 +
-      //     i *
-      //       ((this.$refs.svgZone.clientWidth - 40) /
-      //         this.$props.verticalTexts.length);
-      // });
 
       this.verticalDistanceUnit =
         (this.$refs.svgZone.clientWidth - this.standardPoint.x) /
         this.$props.verticalTexts.length;
 
-      for (let i = 1; i < this.$props.nodes.length; i++) {
-        this.nodeLines[i - 1] = {
-          x1:
-            this.standardPoint.x +
-            this.$props.nodes[i - 1].x * this.verticalDistanceUnit,
-          y1:
-            this.standardPoint.y -
-            this.$props.nodes[i - 1].y * this.horizonDistanceUnit,
-          x2:
+      // for (let i = 1; i < this.$props.nodes.length; i++) {
+      //   this.nodeLines[i - 1] = {
+      //     x1:
+      //       this.standardPoint.x +
+      //       this.$props.nodes[i - 1].x * this.verticalDistanceUnit,
+      //     y1:
+      //       this.standardPoint.y -
+      //       this.$props.nodes[i - 1].y * this.horizonDistanceUnit,
+      //     x2:
+      //       this.standardPoint.x +
+      //       this.$props.nodes[i].x * this.verticalDistanceUnit,
+      //     y2:
+      //       this.standardPoint.y -
+      //       this.$props.nodes[i].y * this.horizonDistanceUnit,
+      //   };
+      // }
+      // tslint:disable-next-line:prefer-for-of
+      for (let i = 0; i < this.$props.nodes.length; i++) {
+        this.bars[i] = {
+          x:
             this.standardPoint.x +
             this.$props.nodes[i].x * this.verticalDistanceUnit,
-          y2:
+          y:
             this.standardPoint.y -
             this.$props.nodes[i].y * this.horizonDistanceUnit,
+          width: 14,
+          height: this.$props.nodes[i].y * this.horizonDistanceUnit,
         };
       }
 

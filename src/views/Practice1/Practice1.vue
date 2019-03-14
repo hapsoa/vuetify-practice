@@ -36,9 +36,9 @@
         <v-card>
           <v-flex py-0 px-3>
             <div class="card-filler">
-              <svg class="svg-filler red-like">
-                <line-graph v-bind="emailSubscriptionGraph"></line-graph>
-              </svg>
+              <div class="svg-filler red-like">
+                <bar-graph v-bind="emailSubscriptionGraph"></bar-graph>
+              </div>
             </div>
 
             <v-card-title px-0>
@@ -332,6 +332,9 @@
         </v-card>
       </v-flex>
     </v-layout>
+    <!-- <v-layout row wrap>
+      <svg class="stack"> </svg>
+    </v-layout>-->
   </v-container>
 </template>
 

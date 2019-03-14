@@ -2,10 +2,14 @@ import { Component, Vue } from 'vue-property-decorator';
 // import _ from 'lodash';
 import Point from '@/api/class/Point.ts';
 import LineGraph from '@/components/LineGraph/LineGraph.vue';
+import BarGraph from '@/components/BarGraph/BarGraph.vue';
+
+// import 'jagu';
 
 @Component({
   components: {
     LineGraph,
+    BarGraph,
   },
 })
 export default class Practice1 extends Vue {
@@ -124,16 +128,33 @@ export default class Practice1 extends Vue {
 
   private emailSubscriptionGraph = {
     horizonTexts: ['0', '200', '400', '600', '800'],
-    verticalTexts: ['12am', '3pm', '6pm', '9pm', '12pm', '3am', '6am', '9am'],
+    verticalTexts: [
+      'Ja',
+      'Fe',
+      'Ma',
+      'Ap',
+      'Mai',
+      'Ju',
+      'Jul',
+      'Au',
+      'Se',
+      'Oc',
+      'No',
+      'De',
+    ],
     nodes: [
-      new Point(0, 1.0),
-      new Point(1, 3.8),
-      new Point(2, 2.2),
-      new Point(3, 1.45),
-      new Point(4, 1.4),
-      new Point(5, 1.1),
-      new Point(6, 1.0),
-      new Point(7, 1.0),
+      new Point(0, 2.7),
+      new Point(1, 2.1),
+      new Point(2, 1.5),
+      new Point(3, 3.8),
+      new Point(4, 2.8),
+      new Point(5, 2.2),
+      new Point(6, 1.6),
+      new Point(7, 2.1),
+      new Point(8, 2.8),
+      new Point(9, 3.0),
+      new Point(10, 3.8),
+      new Point(11, 4.4),
     ],
   };
 
@@ -153,6 +174,10 @@ export default class Practice1 extends Vue {
   };
 
   private created() {
-    console.log('hihi');
+    // console.log('hihi', jagu);
+    // const stack = new jagu.stack();
+    // stack.push(5);
+    // stack.push(3);
+    // stack.push(1);
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <svg ref="svgZone" class="svg-filler">
+  <svg ref="svgZone" class="line-graph">
     <g>
       <line
         v-for="(lineData, i) in horizonLineDataList"
@@ -50,13 +50,13 @@
 <script lang='ts' src='./LineGraph.ts' />
 
 <style scoped lang='scss'>
-.svg-filler {
+.line-graph {
   width: 100%;
   height: 200px;
-  position: absolute;
-  top: -15px;
-  border-radius: 5px;
+  // position: absolute;
+  // top: -15px;
+  // border-radius: 5px;
 
-  margin-top: 20px; // 제거해야 함
+  // margin-top: 20px; // 제거해야 함
 }
 </style>
