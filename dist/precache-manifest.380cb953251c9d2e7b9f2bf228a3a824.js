@@ -1,19 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "48cd9bd88893081635ba",
-    "url": "/vuetify-practice/css/app.be68ed63.css"
+    "revision": "4266fcd81e3eaaeb05da",
+    "url": "/vuetify-practice/css/app.445f8fc8.css"
   },
   {
-    "revision": "48cd9bd88893081635ba",
-    "url": "/vuetify-practice/js/app.36e01e21.js"
+    "revision": "4266fcd81e3eaaeb05da",
+    "url": "/vuetify-practice/js/app.2a32befa.js"
   },
   {
-    "revision": "6be35b935d5e645c031e",
+    "revision": "845d91e198adbfdd5732",
+    "url": "/vuetify-practice/js/chunk-2d0be308.af8ddd87.js"
+  },
+  {
+    "revision": "1ec7471098db8da02db3",
     "url": "/vuetify-practice/css/chunk-vendors.a8166a1c.css"
   },
   {
-    "revision": "6be35b935d5e645c031e",
-    "url": "/vuetify-practice/js/chunk-vendors.49967e12.js"
+    "revision": "1ec7471098db8da02db3",
+    "url": "/vuetify-practice/js/chunk-vendors.fbf321c6.js"
   },
   {
     "revision": "af3f6dbe172a9c1aba77366a2ff630d1",
@@ -36,11 +40,11 @@ self.__precacheManifest = [
     "url": "/vuetify-practice/img/materialdesignicons-webfont.032eb679.svg"
   },
   {
-    "revision": "38e5db74734d5b32feac28f96dc0dd5d",
+    "revision": "8b6195ff3d3955ce7b1378aac890df73",
     "url": "/vuetify-practice/index.html"
   },
   {
-    "revision": "735ab4f94fbcd57074377afca324c813",
+    "revision": "b6216d61c03e6ce0c9aea6ca7808f7ca",
     "url": "/vuetify-practice/robots.txt"
   }
 ];
