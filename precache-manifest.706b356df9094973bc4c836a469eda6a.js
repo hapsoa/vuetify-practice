@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "4266fcd81e3eaaeb05da",
+    "revision": "f0fdfe2ffbc2dc6f1be8",
     "url": "/vuetify-practice/css/app.445f8fc8.css"
   },
   {
-    "revision": "4266fcd81e3eaaeb05da",
-    "url": "/vuetify-practice/js/app.2a32befa.js"
+    "revision": "f0fdfe2ffbc2dc6f1be8",
+    "url": "/vuetify-practice/js/app.cfc00cdf.js"
   },
   {
     "revision": "845d91e198adbfdd5732",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/vuetify-practice/img/materialdesignicons-webfont.032eb679.svg"
   },
   {
-    "revision": "8b6195ff3d3955ce7b1378aac890df73",
+    "revision": "32b841c0640108790249a479abc22c52",
     "url": "/vuetify-practice/index.html"
   },
   {
