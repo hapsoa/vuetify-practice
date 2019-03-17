@@ -187,5 +187,10 @@ export default class LineGraph extends Vue {
         };
       }
     });
+
+    // 임시방편
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 1);
   }
 }

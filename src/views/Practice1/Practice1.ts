@@ -180,4 +180,8 @@ export default class Practice1 extends Vue {
     // stack.push(3);
     // stack.push(1);
   }
+
+  private mounted() {
+    // this.
+  }
 }
